@@ -68,14 +68,17 @@ def TataMotors(x):
 
 def Validate(x):
     y = ""
-    if(x[0:3] == 'MAT' and len(x) == 16):
-        res = TataMotors(x)
-        y = {"Manufacturer":"Tata Motors","Year" : res[0],"Month":res[1]}
-    elif(x[0:2] == 'MB' and len(x) == 17):
-        res = AshokLeyland(x)
-        y = {"Manufacturer":"Ashok Leyland","Year" : res[0],"Month":res[1]}
-    
-    else:
+    try:
+        if(x[0:3] == 'MAT' and len(x) >= 15 and len(x) <= 17):
+            res = TataMotors(x)
+            y = {"Manufacturer":"Tata Motors","Year" : res[0],"Month":res[1]}
+        elif(x[0:2] == 'MB' and len(x) >= 15 and len(x) <= 17):
+            res = AshokLeyland(x)
+            y = {"Manufacturer":"Ashok Leyland","Year" : res[0],"Month":res[1]}
+
+        else:
+            y = "Chassis no is not valid"
+    except:
         y = "Chassis no is not valid"
     return y 
 
