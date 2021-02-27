@@ -90,7 +90,7 @@ def main():
     # here we define some of the front end elements of the web page like  
     # the font and background color, the padding and the text to be displayed 
     html_temp = """ 
-    <h1 style ="color:black;text-align:center;">Chassis Number Validation </h1> 
+    <h1 style ="color:black;text-align:center;">Chassis Number Decoder </h1> 
     </div> 
     """
       
