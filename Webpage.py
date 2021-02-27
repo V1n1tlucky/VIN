@@ -90,7 +90,6 @@ def main():
     # here we define some of the front end elements of the web page like  
     # the font and background color, the padding and the text to be displayed 
     html_temp = """ 
-    <div style ="background-color:blue;padding:13px"> 
     <h1 style ="color:black;text-align:center;">Chassis Number Validation </h1> 
     </div> 
     """
@@ -101,7 +100,7 @@ def main():
       
     # the following lines create text boxes in which the user can enter  
     # the data required to make the prediction 
-    x = st.text_input("VIN", "Type Here")
+    x = st.text_input("VIN", "")
     result ="" 
       
     # the below line ensures that when the button called 'Predict' is clicked,  
