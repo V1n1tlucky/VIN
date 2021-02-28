@@ -67,6 +67,8 @@ def TataMotors(x):
 
 
 def Validate(x):
+    x = x.replace(" ", "").upper()
+    
     y = ""
     try:
         if(x[0:3] == 'MAT' and len(x) >= 15 and len(x) <= 17):
